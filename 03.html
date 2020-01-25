@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soal 3</title>
+</head>
+
+<body>
+    <p>Buatlah sebuah function untuk mencetak sebuah garis miring dari karakter yang diinputkan sebagai parameter</p>
+
+    <script>
+        let input = prompt("Masukan character untuk mencetak garis : ", " ");
+
+        function garisMiring(input) {
+
+            for (var c in input) {
+                document.write(input[c] + "<br>");
+                for (let i = input[c]; i >= input[c]; i++) {
+                    document.write(`&nbsp; ${i} `);
+                    for (let i = input[c]; i >= input[c]; i++) {
+                        document.write(`&nbsp;&nbsp; `);
+                        for (let i = input[c]; i >= input[c]; i++) {
+                            document.write(`&nbsp;&nbsp;&nbsp; `);
+                        }
+                    }
+                }
+            }
+            document.write("<br>");
+
+
+        }
+
+        console.log(garisMiring(input));
+    </script>
+</body>
+
+</html>

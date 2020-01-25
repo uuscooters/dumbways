@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soal 01</title>
+</head>
+
+<body>
+    <p>Di suatu penangkaran terdapat 6.969 burung lovebird. Setiap 21 hari burung tersebut serempak menetaskan satu
+        lovebird baru. <br> Namun sebelum melahirkan, 11,1% dari lovebird tersebut mati. Buatkan lah sebuah program
+        untuk
+        menghitung dan mengetahui jumlah lovebird setelah 441 hari.</p>
+
+    <script>
+        let lovebird = 6969;
+        let hari = 21;
+        let lovebirdMelahirkan = lovebird / 100 * 11.1;
+        let wktMenetaskan = 441 / hari;
+        // console.log(mati);
+
+        let lovebirt_baru = lovebirdMelahirkan * wktMenetaskan * 2;
+        document.write("Jumlah lovebird baru dalam 441 hari adalah : " + Math.round(lovebirt_baru));
+    </script>
+</body>
+
+</html>

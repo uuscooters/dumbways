@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soal 2</title>
+</head>
+
+<body>
+    <p>Buatlah sebuah function yang memiliki sebuah parameter berupa array, <br> function tersebut mempunyai tugas untuk
+        membentuk array baru yang berisikan value nilai tertinggi dan terendah dari tiap array yang dimasukkan.<br>
+        Dengan ketentuan index dari value terbesar tidak boleh lebih kecil dari index value terkecil. <br> Diasumsikan A
+        adalah nilai terkecil dan Z adalah terbesar.</p>
+
+    <div id="inputArray"></div>
+    <div id="MinMax"></div>
+
+    <script>
+        var x = prompt("Masukkan maximal 5 huruf :", "");
+        var data = [];
+
+        if (x) {
+            data.push(x);
+            var x = prompt("Masukkan Lagi :", "");
+            if (x) {
+                data.push(x);
+                var x = prompt("Masukkan Lagi :", "");
+                if (x) {
+                    data.push(x);
+                    var x = prompt("Masukkan Lagi :", "");
+                    if (x) {
+                        data.push(x);
+                        var x = prompt("Masukkan Lagi :", "");
+                        if (x) {
+                            data.push(x);
+                            document.getElementById("inputArray").innerHTML = "Hasil inputan Array Anda :" + data;
+                        } else {
+                            document.getElementById("inputArray").innerHTML = "Hasil inputan Array Anda :" + data;
+                        }
+                    } else {
+                        document.getElementById("inputArray").innerHTML = "Hasil inputan Array Anda :" + data;
+                    }
+                } else {
+                    document.getElementById("inputArray").innerHTML = "Hasil inputan Array Anda :" + data;
+                }
+            } else {
+                document.getElementById("inputArray").innerHTML = "Hasil inputan Array Anda :" + data;
+            }
+        } else {
+            document.getElementById("inputArray").innerHTML = "Anda belum Input apapun silahkan Refresh";
+        }
+
+        function minmax(data) {
+            if (!data) {
+                return null;
+            }
+            let minVal = data[0];
+            let maxVal = data[0];
+
+            for (a of data) {
+                if (a < minVal && a != data[0]) {
+                    minVal = a;
+                }
+                if (a > maxVal || a != data[0]) {
+                    maxVal = a;
+                }
+            }
+            return [minVal, maxVal];
+        }
+        document.getElementById("MinMax").innerHTML = "Hasil inputan Array Anda :" + minmax(data);
+    </script>
+</body>
+
+</html>
